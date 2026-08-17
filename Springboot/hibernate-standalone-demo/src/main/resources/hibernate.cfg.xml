@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <!-- Use HikariCP connection provider (requires hibernate-hikaricp on classpath) -->
+        <property name="hibernate.connection.provider_class">
+            org.hibernate.hikaricp.internal.HikariCPConnectionProvider
+        </property>
+
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+
+        <!-- Note: ampersands escaped as &amp; OR you can wrap in <![CDATA[...]]> -->
+        <property name="hibernate.connection.url">
+            jdbc:mysql://127.0.0.1:3306/testdb?useSSL=false&amp;allowPublicKeyRetrieval=true&amp;serverTimezone=UTC
+        </property>
+
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">root@123</property>
+
+        <!-- Hikari settings -->
+        <property name="hibernate.hikari.minimumIdle">2</property>
+        <property name="hibernate.hikari.maximumPoolSize">10</property>
+        <property name="hibernate.hikari.idleTimeout">30000</property>
+        <property name="hibernate.hikari.connectionTimeout">30000</property>
+        <property name="hibernate.hikari.poolName">HikariCP-Hibernate</property>
+
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <mapping class="com.example.User"/>
+    </session-factory>
+</hibernate-configuration>
