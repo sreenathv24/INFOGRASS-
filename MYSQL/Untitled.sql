@@ -1,0 +1,11 @@
+USE inventory_management;
+SHOW TABLES;
+SELECT * FROM items;
+SELECT * FROM view_invoice_complete_details;
+SELECT * FROM view_all_clients_invoices;
+SELECT * FROM view_all_items_sales;
+SELECT * FROM view_staff_invoice_full;
+SELECT * FROM view_store_wise_sales;
+SELECT * FROM view_high_value_clients;
+SELECT * FROM view_total_sales_per_store;
+SELECT * FROM view_paid_items;
