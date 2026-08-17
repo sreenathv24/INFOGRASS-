@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+    <session-factory>
+        <!-- Database connection settings -->
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/asset_management_db?useSSL=false&amp;serverTimezone=UTC</property>
+        <property name="hibernate.connection.username">root</property>
+        <property name="hibernate.connection.password">root@123</property>
+
+        <!-- JDBC connection pool (optional, can use built-in) -->
+        <property name="hibernate.connection.pool_size">5</property>
+
+        <!-- SQL dialect -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL8Dialect</property>
+
+        <!-- Echo executed SQL to console -->
+        <property name="hibernate.show_sql">true</property>
+        <property name="hibernate.format_sql">true</property>
+
+        <!-- Automatically create/update tables -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <!-- Enable lazy loading outside transaction -->
+        <property name="hibernate.enable_lazy_load_no_trans">true</property>
+
+        <!-- List of annotated entity classes -->
+        <mapping class="com.example.entity.AssetModel"/>
+        <mapping class="com.example.entity.Employee"/>
+        <mapping class="com.example.entity.UserRole"/>
+    </session-factory>
+</hibernate-configuration>
