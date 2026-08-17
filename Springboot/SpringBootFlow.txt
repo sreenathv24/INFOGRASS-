@@ -1,0 +1,33 @@
+
+
+Spring MVC is a web app. It needs some application server to run the war file. Typically, we use tomcat.
+Spring boot is also a web app, but bundled internally with tomcat. So, the output is jar file. Not war file.
+
+3. Presentation - @RestController , Angular code base
+	Business - @Component
+	Persistence - @Service , @Repository, etc etc 
+
+application.properties - to have config values.
+
+dev, uat, prod
+application-dev.properties
+application-uat.properties
+application-prod.properties
+
+VM
+-Dspring.profiles.active=dev (Talk to pratheeksha or naveenram)
+
+Get the JPA, Hibernate examples from Reena, Malar. Get the training also.
+
+By end of Friday, complete all these with sample code checked into github
+Spring MVC
+Spring Boot
+Spring JPA
+Hibernate
+JDBC
+RBDMS sql queries
+Maven
+JSP, JSTL
+
+Mar 11 till Mar 17 - Angular
+Mar 18 till Mar 31 - Project work, leetcode.

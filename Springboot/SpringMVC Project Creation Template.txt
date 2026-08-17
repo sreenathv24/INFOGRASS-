@@ -1,0 +1,22 @@
+Step 1: Goto File > New > Maven Project
+Step 2: Next> Filter: Spring-mvc > co.ntier - spring-mvc-archetype - 1.0.2 > next
+Step 3: Group Id: com.MySpringMvc
+		Artifact Id: MySpringMvc
+		Version: leave this as default, 0.0.1-SNAPSHOT.
+		Package: net.codejava.spring
+		
+		Important Notes:
+		The spring-mvc-archetype from co.ntier was created long time ago so it comes with old versions of Java (1.6),
+		Spring framework (3.1.0) with cglib 2.2.2, Servlet 2.4, etc. 
+		So it's strongly recommended to update the pom.xml file for newer versions.
+		
+		If you use Spring 5, you need to remove the cglib dependency as it is no longer needed, 
+		and update the MvcConfiguration class to implement the WebMvcConfigurer interface like this:
+		
+		import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+		public class MvcConfiguration implements WebMvcConfigurer {
+		
+		
+		
+		
+https://www.codejava.net/frameworks/spring/creating-a-spring-mvc-project-using-maven-and-eclipse-in-one-minute
