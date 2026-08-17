@@ -1,0 +1,1810 @@
+1.JVM :JVM (Java Virtual Machine) is an abstract machine.
+It is a specification that provides runtime environment in which java bytecode can be executed.
+
+JVMs are available for many hardware and software platforms (i.e. JVM is platform dependent).
+
+2.Byte codes :-
+Bytecode in Java is a set of instructions for the Java Virtual Machine. Bytecode is a platform-independent code.
+Bytecode is a code that lies between low-level language and high-level language. After the Java code is compiled, the bytecode gets generated,
+which can be executed on any machine using JVM.
+
+3.compiler :-
+Compiler's job is to compile the code which is written in any language and create byte code
+to execute in machine. Each language have their own compilers.
+
+4.Command to compile java file
+we can use the command: javac SourceFileName.java. The javac command reads class and interface definitions and compiles them into a .
+class file or byte code which can be run on the Java Virtual Machine.
+
+5.Command to execute java file:
+Type'javac MyFirstJavaProgram.java' and press enter to compile your code. If there are no errors in your code, the command prompt will take you to the next
+line (Assumption: The path variable is set).
+Now, type 'java MyFirstJavaProgram' to run your program. You will be able to see the result printed on the window.
+
+6.class:
+Everything in Java is associated with classes and objects, along with its attributes and methods. For example: in real life, a car is an object.
+The car has attributes, such as weight and color, and methods, such as drive and brake.
+A Class is like an object constructor, or a "blueprint" for creating objects.
+
+7.object:
+An object is an instance of a class that has those properties and behaviours attached.An object is allocated memory when it is created.
+
+8.package:
+A java package is a group of similar types of classes, interfaces and sub-packages.
+Package in java can be categorized in two form, built-in package and user-defined package.
+There are many built-in packages such as java, lang, awt, javax, swing, net, io, util, sql etc.
+
+9.Interface:
+An interface in Java is a blueprint of a class. It has static constants and abstract methods.
+
+The interface in Java is a mechanism to achieve abstraction. There can be only abstract methods in the Java interface, not method body.
+It is used to achieve abstraction and multiple inheritance in Java.
+
+->(In other words) you can say that interfaces can have abstract methods and variables. It cannot have a method body.
+
+10.VARIABLES:
+A variable is a container which holds the value while the Java program is executed. A variable is assigned with a data type.
+Syntax:
+data_type variablename= value;
+
+11.OPERATORS:
+Operators in Java are the symbols used for performing specific operations in Java.
+Types of Operators in Java:-
+Arithmetic Operator,
+Shift Operator;
+Relational Operator,
+Bitwise Operator,
+Logical Operator,
+Ternary Operator and
+Assignment Operator.
+
+12.Expressions, Statements, and Blocks
+Expressions:-
+An expression is a construct made up of variables, operators, and method invocations,
+which are constructed according to the syntax of the language, that evaluates to a single value.
+Example:
+int cadence = 0;
+anArray[0] = 100;
+System.out.println("Element 1 at index 0: " + anArray[0]);
+
+int result = 1 + 2; // result is now 3
+if (value1 == value2)
+    System.out.println("value1 == value2");
+
+Statements:
+Statements are roughly equivalent to sentences in natural languages. A statement forms a complete unit of execution.
+ The following types of expressions can be made into a statement by terminating the expression with a semicolon (;).
+
+Assignment expressions
+Any use of ++ or --
+Method invocations
+Object creation expressions
+Such statements are called expression statements. Here are some examples of expression statements.
+
+// assignment statement
+aValue = 8933.234;
+// increment statement
+aValue++;
+// method invocation statement
+System.out.println("Hello World!");
+// object creation statement
+Bicycle myBike = new Bicycle();
+
+Blocks:-
+A block is a group of zero or more statements between balanced braces and can be used anywhere a single statement is allowed.
+
+13.Control Flow Statements
+Java compiler executes the code from top to bottom. The statements in the code are executed according to the order in which they appear.
+However, Java provides statements that can be used to control the flow of Java code. Such statements are called control flow statements.
+It is one of the fundamental features of Java, which provides a smooth flow of program.
+
+Types:
+looping	->while , do-while , for
+decision making	->if-else , switch-case
+exception handling ->	try-catch-finally , throw
+branching ->	break , continue , label: , return
+
+14.Instance Variables
+A variable declared inside the class but outside the body of the method, is called an instance variable. It is not declared as static.
+It is called an instance variable because its value is instance-specific and is not shared among instances.
+
+public class Studentsrecords{
+public String name;//public instance
+string division; //default instance
+private int age;//private instance
+public void setDiv(String sdiv) //class member instance method
+{
+//executable statements
+}}
+
+15.Class Variables(Static Fields)
+Fields that have the static modifier in their declaration are called static fields or class variables.
+They are associated with the class, rather than with any object.
+Every instance of the class shares a class variable, which is in one fixed location in memory.
+public class Bicycle {
+
+    private int cadence;
+    private int gear;
+    private int speed;
+
+    // add an instance variable for the object ID
+    private int id;
+
+    // add a class variable for the
+    // number of Bicycle objects instantiated
+    private static int numberOfBicycles = 0;
+        ...
+}
+
+16.Local variables:
+->A variable declared inside the body of the method is called local variable.
+You can use this variable only within that method and the other methods in the class aren't even aware that the variable exists.
+
+->A local variable cannot be defined with "static" keyword.
+
+17.Parameters
+parameters act as variables inside the method. Parameters are specified after the method name, inside the parentheses.
+You can add as many parameters as you want, just separate them with a comma.
+
+//Invoke the Method
+int num1=25;
+int num2=47;
+int sum = add(num1,num2);//actual parameters(or arguments)
+//method definition
+spublic int add(int x,int y)//formal parameter
+{
+return(x+y);
+}
+
+18.Primitive Data Types:
+There are 8 Primitive data types in Java – Boolean, char, byte, int, short, long, float, and double.
+
+19.Arrays:
+Array is a collection of similar type of elements which has contiguous memory location.
+String[] cars = {"Volvo", "BMW", "Ford", "Mazda"};
+
+20.Operator Precedence:
+The operator precedence represents how two expressions are bind together. In an expression, it determines the grouping of operators with operands and
+decides how an expression will evaluate.
+
+While solving an expression two things must be kept in mind the first is a precedence and
+the second is associativity.
+
+1.Precedence
+Precedence is the priority for grouping different types of operators with their operands.
+It is meaningful only if an expression has more than one operator with higher or lower precedence.
+The operators having higher precedence are evaluated first.
+If we want to evaluate lower precedence operators first, we must group operands by using parentheses and then evaluate.
+
+2.Associativity
+We must follow associativity if an expression has more than two operators of the same precedence.
+In such a case, an expression can be solved either left-to-right or right-to-left, accordingly.
+
+21.Assignment, Arithmetic, and Unary Operators:
+Assignment->Assignment Operators are used to assign a value to a property or variable.
+Arithmetic->Arithmetic Operators are used to perform mathematical calculations.
+unary operators->The unary operators require only one operand; they perform various operations such as incrementing/decrementing
+a value by one, negating an expression, or inverting the value of a boolean.
+
+22.Equality, Relational, and Conditional Operators
+
+Equality& Relational:
+The equality and relational operators determine if one operand is greater than, less than, equal to, or not equal to another operand.
+Keep in mind that you must use "==", not "=", when testing if two primitive values are equal.
+Conditional Operators:
+In Java, conditional operators check the condition and decides the desired result on the basis of both conditions.
+Conditional AND
+Conditional OR
+Ternary Operator
+
+23.The if-then and if-then-else Statements
+The condition expression for the if / then statements must be of Boolean or Nullable Boolean type.
+If the condition is a simple boolean, the if / then statement will execute the then clause if the condition is true,
+and the (optional) else clause if the condition is false.
+
+24.The switch Statement:
+The switch statement or switch case in java is a multi-way branch statement.
+Based on the value of the expression given, different parts of code can be executed quickly.
+Note:Java switch expression must be of byte, short, int, long(with its Wrapper type), enums and string.
+
+
+25.While Loop	                                                                     Do-While Loop
+In the While loop,the condition is tested before any statement is executed. In Do while-loop, the statement is executed at least once even if the
+Syntax:                                                                     condition is false                                                                      Syntax:
+while(condition){                                                            do{
+
+// statements                                                                // statements
+
+}                                                                            }while(expression);
+
+In While loop, no semicolon is needed after the end of the condition.	     In Do-while loop, semicolon needed after the end of the condition
+While loop is an entry-controlled loop.                             	     Do-while loop is an exit-controlled loop.
+While loop may or may not be executed at all.	                             Do-while loop will execute at least once.
+While loop can lead to errors if the condition is always false.	             Do-while loop help prevents error as it runs at least once.
+
+
+26.for Statement:
+ "for loop" the way in which it repeatedly loops until a particular condition is satisfied.
+The for statement consumes the initialization, condition, and increment/decrement in one line thereby providing a shorter,
+easy-to-debug structure of looping.
+
+27.break statement:
+The Java break statement is used to break loop or switch statement. It breaks the current flow of the program at specified condition.
+In case of inner loop, it breaks only inner loop.
+
+We can use Java break statement in all types of loops such as for loop, while loop and do-while loop.
+
+28.continue Statement:
+The continue statement is used in loop control structure when you need to jump to the next iteration of the loop immediately.
+It can be used with for loop or while loop.
+The Java continue statement is used to continue the loop.
+
+29.The return Statement
+Syntax:
+The syntax of a return statement is the return keyword is followed by the value to be returned.
+return returnvalue;
+
+public class SampleReturn1
+{
+    /* Method with an integer return type and no arguments */
+    public int CompareNum()
+    {
+        int x = 3;
+        int y = 8;
+        System.out.println("x = " + x + "\ny = " + y);
+        if(x>y)
+            return x;
+        else
+            return y;
+    }
+
+30.Declaring Classes
+class followed by class name
+class MyClass {
+    // field, constructor, and
+    // method declarations
+}
+
+
+
+31.Declaring Member Variables:
+ a member variable declaration has two components: the data type of the variable and its name.
+type variableName;        // minimal member variable declaration
+A minimal variable declaration is like the declarations that you write for variables used in other areas of your Java
+programs such as local variables or method parameters. The following code snippet declares an integer member variable named anInteger
+ within the class IntegerClass.
+class IntegerClass {
+    int anInteger;
+    . . .
+    // define methods here
+    . . .
+}
+
+32.Access modifiers:
+There are four access modifiers: public, private, protected and default (no keyword).
+Private: The access level of a private modifier is only within the class. It cannot be accessed from outside the class.
+Default: The access level of a default modifier is only within the package.
+It cannot be accessed from outside the package. If you do not specify any access level, it will be the default.
+Protected: The access level of a protected modifier is within the package and outside the package through child class.
+ If you do not make the child class, it cannot be accessed from outside the package.
+Public: The access level of a public modifier is everywhere. It can be accessed from within the class,
+outside the class, within the package and outside the package.
+
+Access Modifier	 within class	within package	outside package by subclass only	outside package
+Private	         Y	                   N	          N	                             N
+Default 	     Y	                   Y	          N	                             N
+Protected        Y	                   Y	          Y	                             N
+Public	         Y	                   Y	          Y	                             Y
+
+33.variable name:
+types:local, instance, and static
+A variable name may store a single type of value. For example, if we declare a variable int type, it stores only an integer value.
+A variable name can only be used once in the program. For example, if we define a variable to hold an integer value,
+we can't use it to store any other sort of value.
+
+34.Defining Methods
+ method definition has two major parts: the method declaration and the method body.
+ The method declaration defines all the method's attributes, such as access level, return type, name, and arguments.
+ The method body is where all the action takes place. It contains the instructions that implement the method.
+
+ public object puch(Object item){
+ item.addElement(item);   ->method body
+ return item;
+ }
+
+ public->Access level
+ object->return type
+ push->method name
+ objectitem->arguments
+
+35.Naming a Method
+Java follows camel-case syntax for naming the class, interface, method, and variable. If the name is combined with two words,
+the second word will start with uppercase letter always such as
+actionPerformed(), firstName, ActionEvent, ActionListener, etc.
+
+36.Overloading Methods
+If a class has multiple methods having same name but different in parameters, it is known as Method Overloading.
+class Adder{
+static int add(int a,int b){return a+b;}
+static int add(int a,int b,int c){return a+b+c;}
+}
+class TestOverloading1{
+public static void main(String[] args){
+System.out.println(Adder.add(11,11));
+System.out.println(Adder.add(11,11,11));
+}
+}
+
+37.Providing Constructors for Your Classes
+A class contains constructors that are invoked to create objects from the class blueprint. Constructor declarations look like
+method declarations—except that they use the name of the class and have no return type. For example, Bicycle has one constructor:
+
+public Bicycle(int startCadence, int startSpeed, int startGear) {
+    gear = startGear;
+    cadence = startCadence;
+    speed = startSpeed;
+}
+
+
+39.Parameter Types
+By convention, type parameter names are single, uppercase letters.
+The most commonly used type parameter names are:
+
+E - Element (used extensively by the Java Collections Framework)
+K - Key
+N - Number
+T - Type
+V - Value
+S,U,V etc. - 2nd, 3rd, 4th types
+
+40.Arbitrary Number of Arguments:-
+In Java, an argument of a method can accept arbitrary number of values. This argument that can accept variable number
+of values is called varargs.
+In order to define vararg, ... (three dots) is used in the formal parameter of a method.
+
+The syntax for implementing varargs is as follows:
+
+accessModifier methodName(datatype… arg) {
+    // method body
+}
+In order to define vararg, ... (three dots) is used in the formal parameter of a method.
+
+41.parameter Name:
+Parameters act as variables inside the method.
+
+Parameters are specified after the method name, inside the parentheses.
+You can add as many parameters as you want, just separate them with a comma.
+
+42.Passing Primitive Data Type Arguments:-
+Passing Primitive Data Types
+You can pass primitive data types--integers, boolean, floats, and so on--into a native method. InputFile's read() method and
+OutputFile's write() method both take an integer argument:
+// in InputFile. java public native int read(byte[] b, int len); // in OutputFile.
+
+43.Passing Reference Data Type Arguments:-
+The variable must have the same data type as the corresponding parameter in the function definition, unless the parameter
+is declared as Variant or is an object variable.
+
+/ Java program to show the difference
+// between formal and actual parameters
+
+import java.io.*;
+
+class GFG {
+  static int sum(int a,int b) // Formal parameters
+  {
+   return a+b;
+  }
+    public static void main (String[] args) {
+       int a=5;
+       int b=10;
+
+      System.out.println(sum(a,b));  //This is actual parameters
+    }
+}
+
+44.Create Object :
+Using the new keyword is the most popular way to create an object or instance of the class.
+ClassName object = new ClassName();
+
+45.Declaring a Variable to Refer to an Object:
+type name
+This notifies the compiler that you will use name to refer to data whose type is type.
+ The Java programming language divides variable types into two main categories: primitive types, and reference types.
+Variables of primitive types (byte, short, int, long, char, float, double, or boolean) always hold a primitive value of that same type.
+
+Variables of reference types, however, are slightly more complex. They may be declared in any of the following ways:
+
+The declared type matches the class of the object:
+MyClass myObject = new MyClass();
+The declared type is a parent class of the object's class:
+MyParent myObject = new MyClass();
+The declared type is an interface which the object's class implements:
+MyInterface myObject = new MyClass();
+You can also declare a variable on its own line, such as:
+
+MyClass myObject;
+
+46.Instantiation of a class :-
+Instantiation in Java - Javatpoint
+In other words, creating an object of the class is called instantiation.
+It occupies the initial memory for the object and returns a reference.
+
+Example: Myclass obj = new Myclass();
+
+47.Initializing an Object:
+3 ways to initialize an object in Java
+1. Using new keyword.
+Tester tester1 = new Tester();
+
+2. Using Class.forName() method
+Tester tester4 = (Tester)Class.forName("Tester").newInstance();
+
+3. Using clone method.
+create a copy of an object.
+Tester tester2 = tester1.clone();
+
+48.Referencing an Object's Fields:
+You also use an object reference to invoke an object's method. You append the method's simple name to the object reference,
+ with an intervening dot operator (.). Also, you provide, within enclosing parentheses, any arguments to the method.
+ If the method does not require any arguments, use empty parentheses.
+
+objectReference.methodName(argumentList);
+or:
+
+objectReference.methodName();
+
+49.Garbage collector:-
+Garbage collection in Java is the automated process of deleting code that's no longer needed or used.
+This automatically frees up memory space and ideally makes coding Java apps easier for developers.
+
+50.Returning a Value from a Method:
+You declare a method's return type in its method declaration. Within the body of the method,
+you use the return statement to return the value.
+
+Any method declared void doesn't return a value. It does not need to contain a return statement, but it may do so.
+return;
+If you try to return a value from a method that is declared void, you will get a compiler error.
+
+Any method that is not declared void must contain a return statement with a corresponding return value, like this:
+
+return returnValue;
+
+
+52.Using this with a Field:
+
+this is a reference to the current object — the object whose method or constructor is being called.
+but it could have been written like this:
+public class Point {
+    public int x = 0;
+    public int y = 0;
+
+    //constructor
+    public Point(int x, int y) {
+        this.x = x;
+        this.y = y;
+    }
+}
+Each argument to the constructor shadows one of the object's fields — inside the constructor x is a local copy of the constructor's first argument.
+ To refer to the Point field x, the constructor must use this.x.
+
+53.Using this with a Constructor:
+From within a constructor, you can also use the this keyword to call another constructor in the same class.
+Doing so is called an explicit constructor invocation.
+
+public class Rectangle {
+    private int x, y;
+    private int width, height;
+
+    public Rectangle() {
+        this(0, 0, 1, 1);
+    }
+    public Rectangle(int width, int height) {
+        this(0, 0, width, height);
+    }
+    public Rectangle(int x, int y, int width, int height) {
+        this.x = x;
+        this.y = y;
+        this.width = width;
+        this.height = height;
+    }
+    ...
+}
+
+54.Controlling Access to Members of a Class:
+An access level determines whether other classes can use a particular member variable or call a particular method.
+The Java programming language supports four access specifiers for member variables and methods: private , protected , public , and,
+if left unspecified, package private.
+
+
+55.Class Variables:
+A variable is a container which holds the value while the Java program is executed. A variable is assigned with a data type.
+Variable is a name of memory location. There are three types of variables in java: local, instance and static.
+
+56.Class Methods:
+In general, a method is a way to perform some task. Similarly, the method in Java is a collection of instructions
+that performs a specific task. It provides the reusability of code. We can also easily modify code using methods.
+
+Example:Inside main, call myMethod():
+
+public class Main {
+  static void myMethod() {
+    System.out.println("Hello World!");
+  }
+
+  public static void main(String[] args) {
+    myMethod();
+  }
+}
+
+// Outputs "Hello World!"
+
+57.How do I call a method on an object in Java?
+The dot ( . ) is used to access the object's attributes and methods.
+To call a method in Java, write the method name followed by a set of parentheses (), followed by a semicolon ( ; ).
+
+57.constant :
+As the name suggests, a constant is an entity in programming that is immutable. In other words, the value that cannot be changed.
+static final double PRICE=432.78;
+
+58.Initializing Fields:
+public class BedAndBreakfast {
+
+    // initialize to 10
+    public static int capacity = 10;
+
+    // initialize to false
+    private boolean full = false;
+}
+
+59.Differences Between Static and Instance Initializer Block
+Static Block	                                                  Instance Initializer Block
+It executes during class loading	                               It executes during class instantiation
+It can only use static variables	                               It can use static or non-static (instance variables).
+It can not use this	                                               It can use this
+It executes only once during the entire execution of the program   It can run many times whenever there is a call to the 	constructor
+when the class loads into the memory
+
+static initialization:A static initialization block is a normal block of code enclosed in braces, { } , and preceded by the static keyword.
+Here is an example:static { // whatever code is needed for initialization goes here } A class can have any number of
+static initialization blocks, and they can appear anywhere in the class body.
+
+60.Returning a Class or Interface
+A method can have the class name as its return type. Therefore it must return the object of the exact class or its subclass.
+An interface name can also be used as a return type but the returned object must implement methods of that interface.
+
+61.Nested Classes:
+Terminology: Nested classes are divided into two categories: non-static and static.
+Non-static nested classes are called inner classes. Nested classes that are declared static are called static nested classes.
+
+62.inner class:
+Java inner class or nested class is a class that is declared inside the class or interface.
+We use inner classes to logically group classes and interfaces in one place to be more readable and maintainable.
+
+63.Java static nested class:
+A static class is a class that is created inside a class, is called a static nested class in Java.
+It cannot access non-static data members and methods. It can be accessed by outer class name.
+Example:
+class TestOuter1{
+  static int data=30;
+  static class Inner{
+   void msg(){System.out.println("data is "+data);}
+  }
+  public static void main(String args[]){
+  TestOuter1.Inner obj=new TestOuter1.Inner();
+  obj.msg();
+  }
+}
+
+64.Inner Class and Nested Static Class Example:
+Java Inner Classes
+In Java, it is also possible to nest classes (a class within a class). The purpose of nested classes is to group classes
+that belong together, which makes your code more readable and maintainable.
+To access the inner class, create an object of the outer class, and then create an object of the inner class:
+
+ExampleGet your own Java Server
+class OuterClass {
+  int x = 10;
+
+  class InnerClass {
+    int y = 5;
+  }
+}
+public class Main {
+  public static void main(String[] args) {
+    OuterClass myOuter = new OuterClass();
+    OuterClass.InnerClass myInner = myOuter.new InnerClass();
+    System.out.println(myInner.y + myOuter.x);
+  }
+}
+
+// Outputs 15 (5 + 10)
+
+65.Shadowing:
+			Shadowing in Java is the practice of using variables in overlapping scopes with the same name where the variable in low-level
+scope overrides the variable of high-level scope. Here the variable at high-level scope is shadowed by the low-level scope variable.
+Basic knowledge of this keyword is required before moving ahead.
+
+// Java program to Demonstrates Shadowing in Java
+
+// Class 1 and 2
+// Outer Class
+class Shadowing {
+
+	// Custom instance variable or member variable
+	String name = "Outer John";
+
+	// Nested inner class
+	class innerShadowing {
+
+		// Instance variable or member variable
+		String name = "Inner John";
+
+		// Method of this class to
+		// print content of instance variable
+		public void print()
+		{
+			// Print statements
+			System.out.println(name);
+			System.out.println(Shadowing.this.name);
+		}
+	}
+}
+
+// Class 3
+// Main class
+class GFG {
+
+	// Main driver method
+	public static void main(String[] args)
+	{
+
+		// Accessing an inner class by
+		// creating object of outer class inside main()
+		Shadowing obj = new Shadowing();
+
+		Shadowing.innerShadowing innerObj
+			= obj.new innerShadowing();
+
+		// Calling method defined inside inner class
+		// inside main() method
+		innerObj.print();
+	}
+}
+
+66.Serialization:
+					Serialization in Java is the concept of representing an object's state as a byte stream.
+The byte stream has all the information about the object.
+Usually used in Hibernate, JMS, JPA, and EJB, serialization in Java helps transport the code from one JVM to another
+and then de-serialize it there.
+
+76.Inner Class Example:
+
+class OuterClass {
+  int x = 10;
+
+  class InnerClass {
+    int y = 5;
+  }
+}
+
+public class Main {
+  public static void main(String[] args) {
+    OuterClass myOuter = new OuterClass();
+    OuterClass.InnerClass myInner = myOuter.new InnerClass();
+    System.out.println(myInner.y + myOuter.x);
+  }
+}
+
+//Outputs 15 (5 + 10)
+
+77.Local and Anonymous Classes
+
+What are local classes?
+Local classes are classes that are defined in a block, which is a group of zero or more statements between balanced braces.
+You typically find local classes defined in the body of a method.
+
+Anonymous Classes:
+In Java, a class can contain another class known as nested class. It's possible to create a nested class without giving any name.
+A nested class that doesn't have any name is known as an anonymous class.
+An anonymous class must be defined inside another class. Hence, it is also known as an anonymous inner class. Its syntax is:
+class outerClass {
+
+    // defining anonymous class
+    object1 = new Type(parameterList) {
+         // body of the anonymous class
+    };
+}
+
+78.Accessing Members of an Enclosing Class
+As a member of its enclosing class, a nested class has a special privilege: It has unlimited access to its enclosing class's members,
+even if they are declared private. However,this special privilege isn't really special at all. It is fully consistent with the meaning
+of private and the other access specifiers.
+
+79.Local Classes Are Similar To Inner Classes:
+Local classes are similar to inner classes because they cannot define or declare any static members.
+Local classes in static methods, such as the class PhoneNumber, which is defined in the static method validatePhoneNumber,
+can only refer to static members of the enclosing class.
+
+->Local classes are non-static because they have access to instance members of the enclosing block.
+Consequently, they cannot contain most kinds of static declarations.
+
+81.Lambda Expressions
+Lambda Expressions were added in Java 8.
+A lambda expression is a short block of code which takes in parameters and returns a value.
+Lambda expressions are similar to methods, but they do not need a name and they can be implemented right in the body of a method.
+
+->use more than one parameter, wrap them in parentheses:
+
+(parameter1, parameter2) -> expression
+
+82.Target Typing
+The Target-Type of an expression is the data type that the Java Compiler expects depending on where the expression appears.
+Java 8 supports inference using Target-Type in a method context.
+
+83.Method References:
+Method references are a special type of lambda expressions.
+
+They're often used to create simple lambda expressions by referencing existing methods.
+There are four kinds of method references:
+1.Static methods.
+2.Instance methods of particular objects.
+3.Instance methods of an arbitrary object of a particular type.
+4.constructor
+
+84.Reference to a static method:
+without creating an instance
+								sytax:ContainingClass::staticMethodName
+ This syntax specifies the class name followed by a dot and then the static method name.
+ If the method takes any parameters, you would include those within the parentheses.
+
+85.Reference to an instance method of a particular object:
+															Syntax:containingObject::instanceMethodName
+The method reference myComparisonProvider::compareByName invokes the method compareByName that is part of the object myComparisonProvider.
+The JRE infers the method type arguments, which in this case are (Person, Person).
+
+class ComparisonProvider {
+    public int compareByName(Person a, Person b) {
+        return a.getName().compareTo(b.getName());
+    }
+	ComparisonProvider myComparisonProvider = new ComparisonProvider();
+Arrays.sort(rosterAsArray, myComparisonProvider::compareByName);
+
+86.Reference to an instance method of an arbitrary object of a particular type:
+Syntax:ContainingType::methodName
+String::compareToIgnoreCase
+String::concat
+String[] stringArray = { "Barbara", "James", "Mary", "John","Patricia", "Robert", "Michael", "Linda" };
+Arrays.sort(stringArray, String::compareToIgnoreCase);
+The equivalent lambda expression for the method reference String::compareToIgnoreCase would have the formal parameter list
+(String a, String b), where a and b are arbitrary names used to better describe this example.
+The method reference would invoke the method a.compareToIgnoreCase(b).
+
+87.Reference to a constructor:
+								Syntax:ClassName::new
+You can reference a constructor in the same way as a static method by using the name new.
+
+88.When to Use Nested Classes, Local Classes, Anonymous Classes, and Lambda Expressions
+
+1.Local class: Use it if you need to create more than one instance of a class, access its constructor, or introduce a new, named type
+			  (because, for example, you need to invoke additional methods later).
+
+2.Anonymous class: Use it if you need to declare fields or additional methods.
+
+3.Lambda expression:
+					Use it if you are encapsulating a single unit of behavior that you want to pass to other code.
+					For example, you would use a lambda expression if you want a certain action performed on each element of a collection,
+					when a process is completed, or when a process encounters an error.
+					->Use it if you need a simple instance of a functional interface and none of the preceding criteria apply
+					(for example, you do not need a constructor, a named type, fields, or additional methods).
+
+4.Nested class:
+				Use it if your requirements are similar to those of a local class, you want to make the type more widely available,
+and you don't require access to local variables or method parameters.
+Use a non-static nested class (or inner class) if you require access to an enclosing instance's non-public fields and methods.
+Use a static nested class if you don't require this access.
+
+89.Enum Types
+An enum type is a special data type that enables for a variable to be a set of predefined constants.
+The variable must be equal to one of the values that have been predefined for it.
+Common examples include compass directions (values of NORTH, SOUTH, EAST, and WEST) and the days of the week.
+Because they are constants, the names of an enum type's fields are in uppercase letters.
+In the Java programming language, you define an enum type by using the enum keyword. For example, you would specify a days-of-the-week
+enum type as:
+Example:-
+
+public enum Day {
+    SUNDAY, MONDAY, TUESDAY, WEDNESDAY,
+    THURSDAY, FRIDAY, SATURDAY
+}
+
+90.Lesson: Annotations:
+						Annotations in Java provide additional information to the compiler and JVM. An annotation is a tag representing metadata about classes, interfaces, variables, methods, or fields. Annotations do not impact the execution of the code that they annotate.
+Some of the characteristics of annotations are: Begin with '@'
+
+92.Where Annotations Can Be Used
+Information for the compiler — Annotations can be used by the compiler to detect errors or suppress warnings.
+Compile-time and deployment-time processing — Software tools can process annotation information to generate code, XML files, and so forth.
+Runtime processing — Some annotations are available to be examined at runtime.
+
+93.Declaring an Annotation Type
+The annotation type definition looks similar to an interface definition where the keyword interface is preceded by the
+at sign ( @ ) (@ = AT, as in annotation type).
+
+94.Predefined Annotation Types
+@Deprecated
+@Override
+@SuppressWarnings
+@SafeVarargs
+@FunctionalInterface
+
+95.Type Annotations and Pluggable Type Systems
+With the judicious use of type annotations and the presence of pluggable type checkers, you can write code that is
+stronger and less prone to error.
+In many cases, you do not have to write your own type checking modules. There are third parties who have done the work for you.
+
+96.Repeating Annotations
+There are some situations where you want to apply the same annotation to a declaration or type use. As of the Java SE 8 release,
+repeating annotations enable you to do this.
+For compatibility reasons, repeating annotations are stored in a container annotation that is automatically generated by the Java compiler.
+
+97.Interfaces in Java
+The interface in Java is a mechanism to achieve abstraction. There can be only abstract methods in the Java interface, not method body.
+It is used to achieve abstraction and multiple inheritance in Java.
+
+99.Interface Body:
+Interface methods do not have a body - the body is provided by the "implement" class.
+On implementation of an interface, you must override all of its methods. Interface methods are by default abstract and public.
+
+100.Implementing an Interface
+An interface is a set of requirements to which classes must conform if they want to use the service provided by the interface.
+To implement an interface, first declare that your class will implement the given interface; second, define the methods in the interface.
+
+java.util.
+
+103.Default Methods
+default methods which allow the interfaces to have methods with implementation without affecting the classes that implement the interface.
+
+106.Inheritance
+Inheritance in Java is a mechanism in which one object acquires all the properties and behaviors of a parent object.
+It is an important part of OOPs (Object Oriented programming system).
+The idea behind inheritance in Java is that you can create new classes that are built upon existing classes.
+
+108.Casting Objects
+In Java, casting an object involves converting an object from one class type to another, provided there is a valid inheritance
+relationship between the classes. The casting process allows the program to treat an object as an instance of
+a different class than its original class.
+
+109.Instance Methods
+Instance methods are methods that require an object of its class to be created before it can be called.
+To invoke an instance method, we have to create an Object of the class in which the method is defined.
+class Foo {
+
+    String name = " ";
+
+    // Instance method to be called within the
+    // same class or from a another class defined
+    // in the same package or in different package.
+    public void geek(String name) { this.name = name;}
+}
+
+class GFG {
+    public static void main(String[] args)
+    {
+        // create an instance of the class.
+        Foo ob = new Foo();
+
+        // calling an instance method in the class 'Foo'.
+        ob.geek("GeeksforGeeks");
+        System.out.println(ob.name);
+    }
+
+110.Static Methods
+Static methods are the methods in Java that can be called without creating an object of class.
+They are referenced by the class name itself or reference to the Object of that class
+Ex:class Student{
+     int rollno;
+     String name;
+     static String college = "ITS";  }
+	 public class TestStaticMethod{
+    public static void main(String args[]){
+    Student.change();//calling change method
+    //creating objects
+    Student s1 = new Student(111,"Karan");
+    Student s2 = new Student(222,"Aryan");
+    Student s3 = new Student(333,"Sonoo");
+    //calling display method
+    s1.display();
+    s2.display();
+    s3.display();
+    }
+}
+
+111.Interface Methods
+						The interface in Java is a mechanism to achieve abstraction. There can be only abstract methods in the Java interface, not method body.
+It is used to achieve abstraction and multiple inheritance in Java.
+Example:// interface
+interface Animal {
+  public void animalSound(); // interface method (does not have a body)
+  public void run(); // interface method (does not have a body)
+}
+
+112.Polymorphism
+				Polymorphism in Java is a concept by which we can perform a single action in different ways. Polymorphism is derived from
+2 Greek words: poly and morphs. The word "poly" means many and "morphs" means forms. So polymorphism means many forms.
+There are two types of polymorphism in Java: compile-time polymorphism and runtime polymorphism.
+We can perform polymorphism in java by method overloading and method overriding.
+
+If you overload a static method in Java, it is the example of compile time polymorphism.
+
+114.Using the Keyword super
+							The super keyword refers to superclass (parent) objects. It is used to call superclass methods, and to access the superclass constructor.
+The most common use of the super keyword is to eliminate the confusion between superclasses and subclasses that have
+methods with the same name.
+
+115.Accessing Superclass Members
+								We can use super keyword to access the data member or field of parent class. It is used if parent class and child class have same fields.
+Example:class Animal{
+String color="white";
+}
+class Dog extends Animal{
+String color="black";
+void printColor(){
+System.out.println(color);//prints color of Dog class
+System.out.println(super.color);//prints color of Animal class
+}
+}
+class TestSuper1{
+public static void main(String args[]){
+Dog d=new Dog();
+d.printColor();
+}
+}
+
+117.Object as a Superclass
+							The Object class is the superclass of all other classes in Java and a part of the built-in java. lang package.
+If a parent class isn't specified using the extends keyword, the class will inherit from the Object class.
+
+118.The clone() Method
+						The clone() method of the Object class is used to create the clone of the object.
+However, if the class doesn't support the cloneable interface, then the clone() method generates the CloneNotSupportedException.
+The syntax of the clone() method is given below.
+protected Object clone() throws CloneNotSupportedException
+
+119.The equals() Method:
+Definition and Usage. The equals() method compares two strings, and returns true if the strings are equal, and false if not.
+String myStr1 = "Hello";
+String myStr2 = "Hello";
+String myStr3 = "Another String";
+System.out.println(myStr1.equals(myStr2)); // Returns true because they are equal
+System.out.println(myStr1.equals(myStr3)); // false
+
+120.The Finalize() Method:
+Finalize() is the method of Object class. This method is called just before an object is garbage collected.
+finalize() method overrides to dispose system resources, perform clean-up activities and minimize memory leaks.
+
+121.The getClass() Method:
+getClass() is the method of Object class. This method returns the runtime class of this object.
+The class object which is returned is the object that is locked by static synchronized method of the represented class.
+public class JavaObjectgetClassExample1 {
+public static void main(String[] args)
+{
+Object obj = new String("JavaTpoint");
+Class a = obj.getClass();
+System.out.println("Class of Object obj is : " + a.getName());
+}
+}
+
+122.The hashCode() Method:
+							The hashCode() method is a Java Integer class method which returns the hash code for the given inputs.
+Error example:
+public class IntegerHashCodeExample3 {
+    public static void main(String[] args) {
+        Integer i = new Integer("abcd");
+          // returns a hash code value for this object
+          int result = i.hashCode();
+          System.out.println("Hash Code Value= " + result);  //output error because abcd is string so return false
+    }
+}
+
+correct example:
+// Example of hashCode(int value)
+public class IntegerHashCodeExample4 {
+    public static void main(String[] args)
+    {
+        int hashValue = Integer.hashCode(155);
+        System.out.println("Hash code Value for object is: " + hashValue);  //output is 155
+    }
+}
+
+123.The toString() Method:
+							If you want to represent any object as a string, toString() method comes into existence.
+The toString() method returns the String representation of the object.
+If you print any object, Java compiler internally invokes the toString() method on the object.
+
+Example:
+124.Writing Final Classes and Methods
+Final class:
+If you make any class as final, you cannot extend it.
+
+Example of final class
+final class Bike{}
+
+class Honda1 extends Bike{
+  void run(){System.out.println("running safely with 100kmph");}
+
+  public static void main(String args[]){
+  Honda1 honda= new Honda1();
+  honda.run();
+  }
+}
+Final method:
+If you make any method as final, you cannot override it.
+
+Example of final method
+class Bike{
+  final void run(){System.out.println("running");}
+}
+
+class Honda extends Bike{
+   void run(){System.out.println("running safely with 100kmph");}
+
+   public static void main(String args[]){
+   Honda honda= new Honda();
+   honda.run();
+   }
+}
+125.Abstract Methods and Classes
+								An abstract class is a class that is declared abstract—it may or may not include abstract methods.
+Abstract classes cannot be instantiated, but they can be subclassed.
+
+An abstract method is a method that is declared without an implementation (without braces, and followed by a semicolon), like this:
+
+abstract void moveTo(double deltaX, double deltaY);
+If a class includes abstract methods, then the class itself must be declared abstract, as in:
+
+public abstract class GraphicObject {
+   // declare fields
+   // declare nonabstract methods
+   abstract void draw();
+}
+
+126.Abstract Classes Compared to Interfaces
+
+Abstract                                                     Interface
+1.using abstract keyword                                       interface keyword
+2.subclass extends abstract class                              subclass implement interface
+3.abstract class can have implemented method 0 or              interface only default&static methods
+more abtract method
+
+4.we can only one abstract class                               we can implement multiple interface
+                                                               interface A {
+                                                              // members of A
+                                                               }
+
+                                                               interface B {
+                                                               // members of B
+                                                               }
+
+                                                               class C implements A, B {
+                                                              // abstract members of A
+                                                              // abstract members of B
+                                                              }
+
+127.An Abstract Class Example
+abstract class Language {
+
+  // method of abstract class
+  public void display() {
+    System.out.println("This is Java Programming");
+  }
+}
+
+class Main extends Language {
+
+  public static void main(String[] args) {
+
+    // create an object of Main
+    Main obj = new Main();
+
+    // access method of abstract class
+    // using object of Main class
+    obj.display();
+  }
+}
+
+128.Class Members
+				In Java, class members are the variables, methods, and nested classes that are defined within a class.
+Class members are also sometimes referred to as class members variables and class members functions.
+There are two main types of class members in Java: instance members and static members.
+
+129.Wrapper classes
+ we can wrap a primitive value into a wrapper class object.
+ ->The eight primitive data types (boolean, char, byte, short, int, long, float, and double) in Java are not objects,
+ but the wrapper classes (Boolean, Character, Byte, Short, Integer, Long, Float, and Double) are.
+
+136.The printf and format Methods
+The printf method in Java can be used to output a formatted string to the console using various format specifiers.
+It is also an overloaded method of the PrintStream class. The printf method behaves the same as the invocation of the format() method.
+System.out.format( ) is equivalent to printf( ) and can also be used.
+
+Formatting:%c	Format characters
+%d	Format decimal (integer) numbers (base 10)
+%e	Format exponential floating-point numbers
+%f	Format floating-point numbers
+%i	Format integers (base 10)
+%o	Format octal numbers (base 8)
+
+138.Creating Strings
+The most direct way to create a string is to write: String greeting = "Hello world!"; In this case, "Hello world!" is a string
+literal—a series of characters in your code that is enclosed in double quotes.
+
+139.String Length
+The length() method returns the number of characters in the string, including spaces and punctuation.
+What is the difference between .length and length () in Java?
+length vs length(): What's the difference?
+#Differences between Java length and length()
+The Java length property is used with the String class. The Java length method is used with the array class.
+The Java length property returns the size of an array. The Java length method returns the number of characters in a text String.
+
+140.Concatenating Strings
+->When you use the '+' operator between two strings, Java combines them into a single string.
+This operation is known as string concatenation. In this example, we've used the '+' operator to concatenate the strings str1 and str2
+
+->concat()Method
+str1.concat(str2);
+
+141.Creating Format Strings
+The java string format() method returns the formatted string by given locale, format and arguments.
+If you don't specify the locale in String.format() method, it uses default locale by calling Locale.getDefault() method.
+Ex:String sf1=String.format("name is %s",name);
+String sf2=String.format("value is %f",32.33434);
+
+142.Converting Strings to Numbers
+The two easiest ways to convert a string to an integer in Java are to use Integer. parseInt() or Integer. valueOf() .
+
+143.Converting Numbers to Strings
+We can convert int to String in java using String.valueOf() and Integer.toString() methods.
+Alternatively, we can use String.format() method, string concatenation operator etc.
+
+144.Getting Characters and Substrings by Index
+You can get the character at a particular index within a string by invoking the charAt() accessor method.
+ The index of the first character is 0, while the index of the last character is length()-1 .
+
+145.Other Methods for Manipulating Strings
+1.CONCATENATE
+2.trim-unwanted space remove this method
+3.Split
+4.The split() method divides a string into a list where each word is a separate element.
+By default, this method splits at each space. my_string = 'Hello, Python!
+5.contains-Use the method “contains” and specify the characters you need to check.
+Returns true if and only if this string contains the specified sequence of char values.
+
+146.Searching for Characters and Substrings in a String
+The String class provides two accessor methods that return the position within the string of a specific character or substring:
+indexOf and lastIndexOf .
+The indexOf method searches forward from the beginning of the string, and lastIndexOf searches backward from the end of the string.
+
+147.Replacing Characters and Substrings into a String
+The Java String class replace() method returns a string replacing all the old char to new char
+public class ReplaceExample1{
+public static void main(String args[]){
+String s1="javatpoint is a very good website";
+String replaceString=s1.replace('a','e');//replaces all occurrences of 'a' to 'e'
+System.out.println(replaceString);
+}}
+
+148.Comparing Strings and Portions of Strings
+The == operator.
+String equals.
+String equalsIgnoreCase-The equalsIgnoreCase() method compares two strings, ignoring lower case and upper case differences.
+This method returns true if the strings are equal, and false if not.
+String compareTo.
+String compareToIgnoreCase-Use compareToIgnoreCase() to compare two strings lexicographyically, ignoring lower case and upper case differences.
+Objects equals-PersonWithEquals joe = new PersonWithEquals("Joe", "Portman");
+PersonWithEquals joeAgain = new PersonWithEquals("Joe", "Portman");
+PersonWithEquals natalie = new PersonWithEquals("Natalie", "Portman");
+
+assertThat(Objects.equals(joe, joeAgain)).isTrue();
+assertThat(Objects.equals(joe, natalie)).isFalse();
+
+
+
+149.The StringBuilder Class
+StringBuilder in Java is a class used to create a mutable, or in other words, a modifiable succession of characters. Like StringBuffer,
+the StringBuilder class is an alternative to the Java Strings Class, as the Strings class provides an immutable succession of characters.
+
+import java.util.*;
+
+public class Example {
+  public static void main(String[] args)
+  {
+    StringBuilder str = new StringBuilder("Hello");
+    System.out.println(str.toString());
+    str.append(" World!");
+    System.out.println(str.toString());
+  }
+}
+
+This produces the following output:
+
+Hello
+Hello World!
+
+
+150.AutoBoxing&UnBoxing
+->Autoboxing refers to the conversion of a primitive value into an object of the corresponding wrapper class is called autoboxing.
+For example, converting int to Integer class
+->Unboxing on the other hand refers to converting an object of a wrapper type to its corresponding primitive value.
+For example conversion of Integer to int.
+
+151.Why Use Generics?
+->Use generic types to maximize code reuse, type safety, and performance.
+->Generics enable the use of stronger type-checking, the elimination of casts, and the ability to develop generic algorithms.
+Without generics, many of the features that we use in Java today would not be possible.
+
+152.Generic Types
+->A generic type is a generic class or interface that is parameterized over types.
+->Generics means parameterized types. The idea is to allow type (Integer, String, … etc., and user-defined types)
+to be a parameter to methods, classes, and interfaces. Using Generics, it is possible to create classes
+that work with different data types.
+
+153.Type Parameter Naming Conventions
+By convention, type parameter names are single, uppercase letters. This stands in sharp contrast to the variable naming conventions that you already know about, and with good reason: Without this convention, it would be difficult to tell the difference between a type variable and an ordinary class or interface name.
+
+The most commonly used type parameter names are:
+
+E - Element (used extensively by the Java Collections Framework)
+K - Key
+N - Number
+T - Type
+V - Value
+S,U,V etc. - 2nd, 3rd, 4th types
+
+154.Multiple Type Parameters
+A Generic class can have muliple type parameters.
+Example:
+The code, new OrderedPair<String, Integer>, instantiates K as a String and V as an Integer.
+Therefore, the parameter types of OrderedPair's constructor are String and Integer, respectively.
+Due to autoboxing, it is valid to pass a String and an int to the class
+
+155.Parameterized Types:
+A parameterized type is created the first time it is needed by a reflective method, as specified in this package.
+Example (of a parameterized type): Collection<String> coll = new LinkedList<String>();
+The declaration Collection<String> denotes a parameterized type,
+which is an instantiation of the generic type Collection , where the place holder E has been replaced by the concrete type String .
+
+156.Raw Types
+A raw type is the name of a generic class or interface without any type arguments.
+
+To create a parameterized type of Box<T>, you supply an actual type argument for the formal type parameter T:
+Box<Integer> intBox = new Box<>();
+If the actual type argument is omitted, you create a raw type of Box<T>:
+Box rawBox = new Box();//raw type
+
+157.Unchecked Error Messages
+An unchecked exception (also known as an runtime exception) in Java is something that has gone wrong with the program and is unrecoverable.
+Just because this is not a compile time exception, meaning you do not need to handle it, that does not mean you don't need to be
+concerned about it.
+
+158.Generic Methods
+Generic methods are methods that introduce their own type parameters. This is similar to declaring a generic type, but the type parameter's
+scope is limited to the method where it is declared. Static and non-static generic methods are allowed,
+as well as generic class constructors.
+
+The syntax for a generic method includes a list of type parameters, inside angle brackets, which appears before the method's return type.
+For static generic methods, the type parameter section must appear before the method's return type.
+
+The Util class includes a generic method, compare, which compares two Pair objects:
+
+public class Util {
+    public static <K, V> boolean compare(Pair<K, V> p1, Pair<K, V> p2) {
+        return p1.getKey().equals(p2.getKey()) &&
+               p1.getValue().equals(p2.getValue());
+    }
+}
+
+159.Bounded Type Parameters
+Bounded type parameters in Java allow you to restrict the types that can be used as type arguments in a generic class or method. You can specify a bound for a type parameter using the `extends` keyword to indicate that the type argument must be a subtype of a specified class or implement a specified interface. This helps ensure type safety and enables you to use methods or access properties specific to the bounded type.
+
+There are two kinds of bounds that can be applied to type parameters:
+
+1. Upper Bound: Specifies that the type argument must be a subtype of the specified type (class or interface).
+
+   public class Box<T extends Number> {
+       private T value;
+       public Box(T value) {
+           this.value = value;
+       }
+       public T getValue() {
+           return value;
+       }
+       public static void main(String[] args) {
+           Box<Integer> intBox = new Box<>(10);
+           Box<Double> doubleBox = new Box<>(10.5);
+
+           // Compiler error: String is not a subtype of Number
+           // Box<String> stringBox = new Box<>("Hello");
+       }
+   }
+ Lower Bound: Specifies that the type argument must be a supertype of the specified type.
+   public static <T extends Comparable<? super T>> T max(List<? extends T> list) {
+       T max = list.get(0);
+       for (T element : list) {
+           if (element.compareTo(max) > 0) {
+               max = element;
+           }
+       }
+       return max;
+   }
+In this example, the method `max` accepts a `List` of elements that are subtypes of `T`, and `T` must be a type that is comparable to itself or a supertype of `T`. This allows the method to work with elements that are `T` or any of its superclasses.
+
+Bounded type parameters help improve the flexibility and type safety of generic classes and methods by restricting the types that can be used as type arguments.
+
+161.Generic Classes and Subtyping
+You can subtype a generic class or interface by extending or implementing it. The relationship between the type parameters of one class or
+interface and the type para                                        meters of another are determined by the extends and implements clauses.
+
+Using the Collections classes as an example, ArrayList<E> implements List<E>, and List<E> extends Collection<E>. So ArrayList<String> is a
+subtype of List<String>, which is a subtype of Collection<String>. So long as you do not vary the type argument, the subtyping relationship
+is preserved between the types.
+
+interface PayloadList<E,P> extends List<E> {
+  void setPayload(int index, P val);
+  ...
+}
+The following parameterizations of PayloadList are subtypes of List<String>:
+
+PayloadList<String,String>
+PayloadList<String,Integer>
+PayloadList<String,Exception>
+
+165.Target Types
+The Target-Type of an expression is the data type that the Java Compiler expects depending on where the expression appears.
+Java 8 supports inference using Target-Type in a method context.
+
+166.Wildcards
+The question mark (?) is known as the wildcard in generic programming. It represents an unknown type.
+The wildcard can be used in a variety of situations such as the type of a parameter, field, or local variable;
+
+167.Upper Bounded Wildcards
+You can use an upper bounded wildcard to relax the restrictions on a variable.
+For example, say you want to write a method that works on List<Integer>, List<Double>, and List<Number>;
+you can achieve this by using an upper bounded wildcard.
+
+To declare an upper-bounded wildcard, use the wildcard character ('?'), followed by the extends keyword, followed by its upper bound.
+Note that, in this context, extends is used in a general sense to mean either "extends" (as in classes) or "implements" (as in interfaces).
+
+168.Unbounded Wildcards
+The unbounded wildcard type is specified using the wildcard character (?), for example, List<?>. This is called a list of unknown type. There are two scenarios where an unbounded wildcard is a useful approach:
+
+If you are writing a method that can be implemented using functionality provided in the Object class.
+
+169.What is lower bounded wildcard?
+In a similar way, a lower bounded wildcard restricts the unknown type to be a specific type or a super type of that type.
+A lower bounded wildcard is expressed using the wildcard character ('?
+
+170.Wildcards and Subtyping
+->Subtyping is a key feature of object-oriented languages such as Java.
+In Java, one type is a subtype of another if they are related by an extends or implements clause. Here are some examples: Integer.
+
+->wildcard
+It's written Collection<?> ( pronounced
+ "collection of unknown"), that is, a collection whose element type matches anything. It's called a wildcard type for obvious reasons.
+
+172.Erasure of Generic Types
+During the type erasure process, the Java compiler erases all type parameters and replaces each with its first bound if the type parameter
+is bounded, or Object if the type parameter is unbounded.
+
+173.Erasure of Generic Methods
+Replace all type parameters in generic types with their bounds or Object if the type parameters are unbounded. The
+produced bytecode, therefore, contains only ordinary classes, interfaces, and methods. Insert type casts if necessary to preserve
+type safety.
+
+176.Restrictions on Generics
+There are a few restrictions associated with the usage of generics that are mentioned below:
+
+1.Type parameters cannot be instantiated
+/ Java Program to demonstrate Generic class creation with
+// the type parameter T.
+class GenType<T> {
+    private T data;
+
+    GenType(T data)
+    {
+        // parameterized constructor
+        this.data = data;
+    }
+
+    T getData() { return data; }
+
+    // main function
+    public static void main(String[] args)
+    {
+        GenType<Integer> gt = new GenType<>(10);
+        System.out.println(gt.getData());
+    }
+}
+2.Restriction on using static members
+3.Generic array Restrictions
+4.primitive data types are not used with generic types
+5.Generic Exception Restriction
+
+177.Creating and Using Packages
+To make types easier to find and use, to avoid naming conflicts, and to control access,
+programmers bundle groups of related types into packages.
+Definition: A package is a grouping of related types providing access protection and name space management.
+
+178.static import
+static import, we can access the static members of a class directly without class name or any object.
+ For Example: we always use sqrt() method of Math class by using Math class i.e. Math.sqrt(),
+ but by using static import we can access sqrt() method directly.
+
+180.Setting the CLASSPATH System Variable
+CLASSPATH is also an environment variable. It is used by the operating system to find the executable files (.exe).
+It is used by Application ClassLoader to locate the . class file. You are required to include the directory which contains .exe files.
+
+181.What Is an Exception?
+Formally, an exception in Java is “an event, which occurs during the execution of a program, that disrupts the
+normal flow of the program’s instructions.” There are many typical causes for exceptions in Java, including:
+Loss of network connectivity
+Invalid input data
+Requests for missing or non-existent files
+
+182.The Catch or Specify Requirement
+Valid Java programming language code must honor the Catch or Specify Requirement. This means that code that might throw certain exceptions
+ must be enclosed by either of the following:
+A try statement that catches the exception. The try must provide a handler for the exception, as described in Catching and
+Handling Exceptions.
+
+183.The Three Kinds of Exceptions
+1.Checked exceptions are subject to the Catch or Specify Requirement.
+All exceptions are checked exceptions, except for those indicated by Error, RuntimeException, and their subclasses.
+2.Errors are not subject to the Catch or Specify Requirement.
+Errors are those exceptions indicated by Error and its subclasses, java.io.IOError.
+3.Runtime exceptions are not subject to the Catch or Specify Requirement. Runtime exceptions are those indicated
+by RuntimeException and its subclasses.
+Errors and runtime exceptions are collectively known as unchecked exceptions.
+
+184.Catching and Handling Exceptions
+Each catch block is an exception handler that handles the type of exception indicated by its argument.
+
+185.The try Block
+The try statement allows you to define a block of code to be tested for errors while it is being executed.
+
+186.The catch Blocks
+The catch statement allows you to define a block of code to be executed, if an error occurs in the try block.
+
+188.The finally Block
+The finally block in java is used to put important codes such as clean up code e.g. closing the file or closing the connection.
+The finally block executes whether exception rise or not and whether exception handled or not.
+
+194.The throw Statement
+The throw-statement can be used to throw an object when a program detects an error. The use of the throw-statement
+allows a program to react to errors that it detects just the way the Java runtime system and all the predefined classes react
+
+195.Throwable Class and Its Subclasses
+The class at the top of the exception class hierarchy is the Throwable class, which is a direct subclass of the Object class.
+Throwable has two direct subclasses - Exception and Error.
+
+
+196.Error Class
+In Java, an error is a subclass of Throwable that tells that something serious problem is existing and a reasonable Java application
+should not try to catch that error.
+Example:class StackExample {
+    public static void check(int i)
+    {
+        if (i == 0)
+            return;
+        else {
+            check(i++);
+        }
+    }
+}
+public class Main {
+
+    public static void main(String[] args)
+    {
+StackExample.check(5);
+    }
+}
+Code Explanation
+In the above code, we have performed a program of Stack overflow.
+In it, we have created a class, namely StackOverflow, within which designed a function that performs an infinite recursion.
+Next, in the main class, we have invoked the function, and it results in infinite recursion.
+
+197.Exception Class
+Java provides Java.lang.Exception class for handling the exceptions which inherit the properties and methods of Object and Throwable class.
+
+198.Chained Exceptions
+Chained Exception helps to identify a situation in which one exception causes another Exception in an application.
+For instance, consider a method which throws an ArithmeticException because of an attempt to divide by zero but the
+actual cause of exception was an I/O error which caused the divisor to be zero.
+The method will throw the ArithmeticException to the caller. The caller would not know about the actual cause of an Exception.
+Chained Exception is used in such situations.
+
+199.Accessing Stack Trace Information
+You can obtain a stack trace from a thread – by calling the getStackTrace method on that Thread instance.
+This invocation returns an array of StackTraceElement, from which details about stack frames of the thread can be extracted.
+Example:
+public StackTraceElement[] methodA() {
+    return methodB();
+}
+
+public StackTraceElement[] methodB() {
+    Thread thread = Thread.currentThread();
+    return thread.getStackTrace();
+}
+
+200.logging API:
+The logging APIs support a general-purpose filter mechanism that allows application code to attach arbitrary filters to control
+logging output. Formatter: Provides support for formatting LogRecord objects.
+
+201.Creating Exception Classes
+In Java, we can create our own exceptions that are derived classes of the Exception class.
+Creating our own Exception is known as custom exception or user-defined exception.
+Basically, Java custom exceptions are used to customize the exception according to user need.
+
+202.Choosing a Superclass
+The class from which its derived is called the superclass. In fact, in Java, all classes must be derived from some class.
+
+203.Unchecked Exceptions — The Controversy
+An unchecked exception (also known as an runtime exception) in Java is something that has gone wrong with the program and is
+unrecoverable. Just because this is not a compile time exception, meaning you do not need to handle it, that does not mean you don't
+need to be concerned about it.
+
+234.Lesson: The Platform Environment
+An application runs in a platform environment, defined by the underlying operating system, the Java virtual machine, the class libraries,
+and various configuration data supplied when the application is launched.
+
+235.Properties
+import java.util.Properties;
+properties generally refer to key-value pairs that are used to maintain configuration settings or other data in a structured way. The Properties class in Java is specifically designed to handle key-value pairs where both the keys and values are strings
+
+237.What is a command line argument in Java?
+The command line argument in java is the information passed to the program at the time of running the program.
+It is the argument passed through the console when the program is run.
+The command line argument is the data that is written right after the program's name at the command line while executing the program.
+
+238.Environment Variables
+Many operating systems use environment variables to pass configuration information to applications.
+Like properties in the Java platform, environment variables are key/value pairs, where both the key and the value are strings.
+The conventions for setting and using environment variables vary between operating systems, and also between command line interpreters.
+
+239.System Properties
+The System class maintains a Properties object that describes the configuration of the current working environment.
+System properties include information about the current user, the current version of the Java runtime, and the character used to
+separate components of a file path name.
+
+240.Reading System Properties
+The System class has two methods used to read system properties: getProperty and getProperties.
+ The System class has two different versions of getProperty . Both retrieve the value of the property named in the argument list.
+
+241.Writing System Properties
+To modify the existing set of system properties, use System. setProperties.This method takes a Properties object that has been initialized
+to contain the properties to be set. This method replaces the entire set of system properties with the new set represented by the
+Properties object.
+
+242.PATH and CLASSPATH
+The main difference between PATH and CLASSPATH is that Path is set for java tools in java programs like java and javac,
+which are used to compile your code. Whereas CLASSPATH is used by System or Application class loader to locate and load compile
+Java bytecodes stored in the . class file.
+
+243.Regular Expressions (Learn the basics)
+A regular expression is a sequence of characters that forms a search pattern. When you search for data in a text, you can use this search pattern to describe what you are searching for.
+
+A regular expression can be a single character, or a more complicated pattern.
+
+Regular expressions can be used to perform all types of text search and text replace operations.
+
+Java does not have a built-in Regular Expression class, but we can import the java.util.regex package to work with regular expressions. The package includes the following classes:
+
+Pattern Class - Defines a pattern (to be used in a search)
+Matcher Class - Used to search for the pattern
+PatternSyntaxException Class - Indicates syntax error in a regular expression pattern
+
+244.interface :
+acheive abstraction,using implement keyword.
+without creating instance,using multiple inheritance in interface,multiple methods don't allow using default using multiple methods.
+
+245.The Collection Interface
+The Collection interface is a member of the Java Collections Framework.
+It is a part of java.util package. It is one of the root interfaces of the Collection Hierarchy.
+The Collection interface is not directly implemented by any class.
+However, it is implemented indirectly via its subtypes or subinterfaces like List, Queue, and Set.
+
+For Example, the HashSet class implements the Set interface which is a subinterface of the Collection interface.
+If a collection implementation doesn’t implement a particular operation, it should define the corresponding method to
+throw UnsupportedOperationException.
+
+
+246.Aggregate Operations
+247.It is mainly used to traverse the array or collection elements. The advantage of the for-each loop is that it eliminates the possibility
+of bugs and makes the code more readable. It is known as the for-each loop because it traverses each element one by one.
+Advantages
+It makes the code more readable.
+It eliminates the possibility of programming errors.
+Example:
+//An example of Java for-each loop
+class ForEachExample1{
+  public static void main(String args[]){
+   //declaring an array
+   int arr[]={12,13,14,44};
+   //traversing the array with for-each loop
+   for(int i:arr){
+     System.out.println(i);
+   }
+ }
+}
+Output:
+
+12
+12
+14
+44
+
+
+248.Iterators
+Iterator in Java is an object used to cycle through arguments or elements present in a collection. It is derived from
+the technical term “iterating,” which means looping through. Generally, an iterator in Java is used to loop through any
+collection of objects.
+
+249.Collection Interface Bulk Operations
+Bulk operations perform an operation on an entire Collection. You could implement these shorthand operations using the basic operations, though in most cases such implementations would be less efficient. The following are the bulk operations:
+
+containsAll — returns true if the target Collection contains all of the elements in the specified Collection.
+addAll — adds all of the elements in the specified Collection to the target Collection.
+removeAll — removes from the target Collection all of its elements that are also contained in the specified Collection.
+retainAll — removes from the target Collection all its elements that are not also contained in the specified Collection. That is, it retains only those elements in the target Collection that are also contained in the specified Collection.
+clear — removes all elements from the Collection.
+
+250.Collection Interface Array Operations
+The toArray methods are provided as a bridge between collections and older APIs that expect arrays on input.
+The array operations allow the contents of a Collection to be translated into an array. The simple form with no arguments creates a
+new array of Object. The more complex form allows the caller to provide an array or to choose the runtime type of the output array.
+
+For example, suppose that c is a Collection. The following snippet dumps the contents of c into a newly allocated array of Object
+whose length is identical to the number of elements in c.
+Object[] a = c.toArray();
+
+251.The Set Interface
+Set in Java is an interface declared in java. util package.
+It extends the collection interface that allows creating an unordered collection or list, where duplicate values are not allowed.
+
+implement-Eumset,Hashset,Treeset,LinkedHashset.
+
+252.The List Interface
+The List interface in Java provides a way to store the ordered collection. It is a child interface of Collection.
+It is an ordered collection of objects in which duplicate values can be stored.
+Since List preserves the insertion order, it allows positional access and insertion of elements.
+
+
+253.The Queue Interface
+The Queue interface is present in java.util package and extends the Collection interface is used to hold the elements about to be processed
+in FIFO(First In First Out) order. It is an ordered list of objects with its use limited to inserting elements at the end of the list and
+deleting elements from the start of the list, (i.e.), it follows the FIFO or the First-In-First-Out principle.
+-> Being an interface the queue needs a concrete class for the declaration and the most common classes are the PriorityQueue and LinkedList
+in Java.
+->public interface Queue extends Collection
+Creating Queue Objects: Since Queue is an interface, objects cannot be created of the type queue.
+We always need a class which extends this list in order to create an object. And also, after the introduction of Generics in Java 1.5,
+ it is possible to restrict the type of object that can be stored in the Queue. This type-safe queue can be defined as:
+
+// Obj is the type of the object to be stored in Queue
+Queue<Obj> queue = new PriorityQueue<Obj> ();
+
+254.Deque interface
+The Deque interface is a richer abstract data type than both Stack and Queue because it implements both stacks and queues at the same time.
+The Deque interface, defines methods to access the elements at both ends of the Deque instance. Methods are provided to
+insert, remove, and examine the elements.
+
+255.Map Interface
+Map Interface is present in java.util package represents a mapping between a key and a value. Java Map interface is not a subtype of the
+Collection interface. Therefore it behaves a bit differently from the rest of the collection types. A map contains unique keys.
+
+*creating Map object
+Map hm = new HashMap();
+// Obj is the type of the object to be stored in Map
+
+->clear()
+->containsKey(Object)
+->containsValue(Object)
+->entrySet()
+->equals(Object)
+
+256.
+
+
+281.Algorithm:
+An algorithm is a process or a set of rules required to perform calculations or some other problem-solving operations especially
+by a computer. The formal definition of an algorithm is that it contains the finite set of instructions which are being carried in a
+specific order to perform the specific task. It is not the complete program or code;
+it is just a solution (logic) of a problem, which can be represented either as an informal description using a Flowchart or Pseudocode.
+
+282.Sorting:sorting algorithm is an algorithm that puts elements of a list into an order. The most frequently used orders are
+numerical order and lexicographical order, and either ascending or descending.
+
+283.shuffle():
+The shuffle() is a Java Collections class method which works by randomly permuting the specified list elements.
+There is two different types of Java shuffle() method which can be differentiated depending on its parameter. These are:
+
+Java Collections shuffle(list) Method
+Java Collections shuffle(list, random) Method
+
+284.Routine Data Manipulation:
+reverse — reverses the order of the elements in a List.
+fill — overwrites every element in a List with the specified value. This operation is useful for reinitializing a List.
+copy — takes two arguments, a destination List and a source List, and copies the elements of the source into the destination,
+overwriting its contents. The destination List must be at least as long as the source. If it is longer, the remaining elements in
+the destination List are unaffected.
+swap — swaps the elements at the specified positions in a List.
+addAll — adds all the specified elements to a Collection. The elements to be added may be specified individually or as an array.
+
+
+285.Searching Algorithms are designed to check for an element or retrieve an element from
+any data structure where it is stored. Based on the type of search operation, these algorithms are generally classified into two categories:
+1.Sequential Search: In this, the list or array is traversed sequentially and every element is checked.
+For Example: Linear Search.
+
+2.Interval Search:  Linear Search as they repeatedly target the center of the search structure and divide the search space in half.
+For Example: Binary Search.
+
+286.Lesson: Date-Time Overview:
+Time seems to be a simple subject; even an inexpensive watch can provide a reasonably accurate date and time.
+However, with closer examination, you realize the subtle complexities and many factors that affect your understanding of time.
+
+287.Date-Time Design Principles
+1.Clear
+The methods in the API are well defined and their behavior is clear and expected.
+For example, invoking a Date-Time method with a null parameter value typically triggers a NullPointerException.
+2.Fluent
+The Date-Time API provides a fluent interface, making the code easy to read.
+3.Immutable
+Most of the classes in the Date-Time API create objects that are immutable, meaning that, after the object is created,
+it cannot be modified.
+4.Extensible
+The Date-Time API is extensible wherever possible. For example, you can define your own time adjusters and queries,
+or build your own calendar system.
+
+288.Lesson: Standard Calendar:
+The core of the Date-Time API is the java. time package. The classes defined in java. time base their calendar system
+on the ISO calendar, which is the world standard for representing date and time.
+
+289.LocalDate
+LocalDate is an immutable date-time object that represents
+a date, often viewed as year-month-day. Other date fields, such as day-of-year, day-of-week and week-of-year, can also be accessed.
+
+290.YearMonth
+Java YearMonth class is an immutable date-time object that represents the combination of a year and month.
+It inherits the Object class and implements the Comparable interface.
+syntax:
+java.time.YearMonth
+
+291.MonthDay:
+MonthDay is an immutable date-time object that represents the combination of a month and day-of-month.
+syntax:java.time.MonthDay
+
+292.Year
+syntax:java.time.Year
+Java Year class is an immutable date-time object that represents a year.
+It inherits the Object class and implements the Comparable interface.
+
+293.LocalTime
+syntax:java.time.LocalTime
+LocalTime is an immutable date-time object that represents a time, often viewed as hour-minute-second.
+Time is represented to nanosecond precision. For example, the value "13:45.30.123456789" can be stored in a LocalTime.
+
+294.LocalDateTime
+syntax:java.time.LocalDateTime
+LocalDateTime is an immutable date-time object that represents a date-time, often viewed as year-month-day-hour-minute-second.
+Other date and time fields, such as day-of-year, day-of-week and week-of-year, can also be accessed. Time is
+represented to nanosecond precision. For example, the value "2nd October 2007 at 13:45.30.123456789" can be stored in a LocalDateTime.
+
+295.Instant Class:
+Instant Class, an instant is a measured timestamp from the Java epoch of 1970-01-01T00:00:00Z. Java 8 contains a handy class
+called Instant to represent a specific instantaneous point on the timeline.
+Typically, we can use this class to record event timestamps in our applications.
+
+296.Lesson: Packaging Programs in JAR Files
+The Java™ Archive (JAR) file format enables you to bundle multiple files into a single archive file.
+Typically a JAR file contains the class files and auxiliary resources associated with applets and applications.
